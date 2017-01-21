@@ -40,6 +40,8 @@ body {
 header {
 	position: relative;
 	width: 100%;
+	z-index: 1;
+	user-select: none;
 
 	nav {
 		padding: 1em;
@@ -48,6 +50,15 @@ header {
 
 		}
 	}
+}
+
+.stars {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 }
 
 .info {
@@ -61,6 +72,7 @@ header {
 	header {
 		margin: auto;
 		text-align: center;
+		user-select: none;
 
 		.title {
 			font-size: 20vmin;
