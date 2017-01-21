@@ -1,0 +1,9 @@
+// SASS mixins
+
+@mixin box-shadow($color) {
+  box-shadow: 0 0 20px $color;
+}
+
+@mixin transition($duration: .25s) {
+  transition: all $duration ease-in-out;
+}

@@ -1,0 +1,199 @@
+// Main SASS file -- outputs to build/css/main.css
+
+@import 'variables';
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+body {
+	background: url('../img/space.jpg');
+	background-size: cover;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(to bottom, rgba(0,0,255, 0.25), rgba(0,0,0,0.75));
+		z-index: -1;
+	}
+}
+
+header {
+	position: relative;
+	width: 100%;
+
+	nav {
+		padding: 1em;
+
+		.logo {
+
+		}
+	}
+}
+
+.info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+	header {
+		margin: auto;
+		text-align: center;
+
+		.title {
+			font-size: 20vmin;
+			text-shadow: 0 0 20px rgba(0,0,0,$opacity);
+			text-transform: uppercase;
+		}
+
+		.subtitle {
+			font-size: 1em;
+		}
+	}
+
+	.astros {
+
+		.astro {
+			border-width: 2px;
+			border-radius: 50%;
+			border-style: solid;
+			padding: .75em;
+			position: absolute;
+			left: 45%;
+			top: 45%;
+			min-height: 125px;
+			min-width: 125px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column wrap;
+			z-index: -1;
+			user-select: none;
+			@include transition(1s);
+
+			&:first-child,
+			&:nth-child(n + 4) {
+				background: rgba(map-get($colors, 'color-1'), $bg-opacity);
+				border-color: rgba(map-get($colors, 'color-1'), $ring-opacity);
+				@include box-shadow(map-get($colors, 'color-1'));
+				animation: glow 7.5s infinite linear;
+			}
+
+			&:nth-child(2),
+			&:nth-child(2n + 4) {
+				background: rgba(map-get($colors, 'color-2'), $bg-opacity);
+				border-color: rgba(map-get($colors, 'color-2'), $ring-opacity);
+				@include box-shadow(map-get($colors, 'color-2'));
+				animation: glow 7.5s infinite .25s linear;
+			}
+
+			&:nth-child(3),
+			&:nth-child(3n + 4) {
+				background: rgba(map-get($colors, 'color-3'), $bg-opacity);
+				border-color: rgba(map-get($colors, 'color-3'), $ring-opacity);
+				@include box-shadow(map-get($colors, 'color-3'));
+				animation: glow 7.5s infinite .5s linear;
+			}
+
+			&:nth-child(4),
+			&:nth-child(4n) {
+				background: rgba(map-get($colors, 'color-4'), $bg-opacity);
+				border-color: rgba(map-get($colors, 'color-4'), $ring-opacity);
+				@include box-shadow(map-get($colors, 'color-4'));
+				animation: glow 7.5s infinite .75s linear;
+			}
+
+			&:first-child {
+				top: 50%;
+				left: 7%;
+			}
+
+			&:nth-child(2) {
+				top: 7%;
+				left: 18%;
+			}
+
+			&:nth-child(3) {
+				top: 30%;
+				left: 37%;
+			}
+
+			&:nth-child(4) {
+				top: 40%;
+				left: 82%;
+			}
+
+			&:nth-child(5) {
+				top: 15%;
+				left: 71%;
+			}
+
+			&:nth-child(6) {
+				top: 83%;
+				left: 46%;
+			}
+
+			&:nth-child(7) {
+				top: 7%;
+				left: 53%;
+			}
+
+			&:nth-child(8) {
+				top: 59%;
+				left: 29%;
+			}
+
+			&:nth-child(9) {
+				top: 76%;
+				left: 63%;
+			}
+
+			&:nth-child(10) {
+				top: 7%;
+				left: 87%;
+			}
+
+			.name {
+				font-size: .75em;
+			}
+
+			.craft {
+				font-size: .65em;
+			}
+		}
+	}
+}
+
+@keyframes glow {
+	0%, 100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: .75;
+		transform: scale(1.05);
+	}
+}
