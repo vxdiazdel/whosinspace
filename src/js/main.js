@@ -5,7 +5,7 @@ $(document).ready(function() {
 					template = Handlebars.compile(source),
 					$info = $('.info'),
 					$count = $('#count'),
-					api = 'http://api.open-notify.org/astros.json';
+					api = '//api.open-notify.org/astros.json';
 
 		function randomize(min, max) {
 			return Math.floor(Math.random() * max - min) + min;
