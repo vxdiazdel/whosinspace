@@ -1,6 +1,5 @@
 .DS_Store
 *.log
-*.jpg
-*.png
+src/img/*
 node_modules/
 bower_components/
