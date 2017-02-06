@@ -35,7 +35,6 @@ $(document).ready(function() {
 				};
 				stars.push(star);
 			}
-			console.log('Create stars:', stars)
 		}
 
 		function drawStars() {
@@ -50,7 +49,6 @@ $(document).ready(function() {
 		}
 
 		function glow() {
-			console.log('Glow:', stars[0]);
 			drawCanvas();
 			for (let i = 0; i < stars.length; i++) {
 				if (stars[i].opacity > 1) {

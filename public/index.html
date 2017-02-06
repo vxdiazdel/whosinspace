@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Who's In Space?</title>
+	<link rel="stylesheet" href="build/css/main.css">
+	<!-- Modernizr JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<span class="logo">Who's In Space</span>
+		</nav>
+	</header>
+	<canvas class="stars"></canvas>
+	<main class="info"></main>
+
+	<script id="astro-template" type="text/x-handlebars-template">
+		<header>
+			<h1 class="title"><span id="count">{{number}}</span> People</h1>
+			<h2 class="subtitle">In Space Today</h2>
+		</header>
+		<div class="astros">
+			{{#each people}}
+				<div class="astro">
+					<h3 class="name">{{this.name}}</h3>
+					<h4 class="craft">{{this.craft}}</h4>
+				</div>
+			{{/each}}
+		</div>
+	</script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Handlebars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+<script src="build/js/bundle.js"></script>
+</body>
+</html>
