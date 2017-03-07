@@ -12,7 +12,7 @@ $(document).ready(function() {
 					minSize = 1,
 					maxSize = 2,
 					stars = [],
-					api = '//api.open-notify.org/astros.json';
+					api = '//astrosapi.herokuapp.com/api';
 
 		ctx.canvas.width = cW;
 		ctx.canvas.height = cH;
